@@ -3,7 +3,15 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const promptSchema = new Schema({
-    query: {
+    originalTranscript : {
+        type: String,
+        required: true
+    },
+    translatedTranscript : {
+        type: String,
+        required: true
+    },
+    user_id: {
         type: String,
         required: true
     }
